@@ -1,5 +1,5 @@
 <template>
-    <header class="w-screen bg-red-900 h-28 space-y-2 ">
+    <header class="max-w-screen bg-red-900 h-28 space-y-2 ">
         <div class="flex items-center justify-around w-full">
             <div class="flex gap-4">
                 <Flame class="text-white size-8" />
