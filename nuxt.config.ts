@@ -5,20 +5,34 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/color-mode", "motion-v/nuxt", "@vueuse/nuxt", "@nuxt/icon", "@nuxt/fonts"],
+  vueSonner: {
+    css: false,
+  },
+
+  modules: [
+    "@nuxtjs/color-mode",
+    "motion-v/nuxt",
+    "@vueuse/nuxt",
+    "@nuxt/icon",
+    "@nuxt/fonts",
+    "@nuxtjs/supabase",
+    "@vee-validate/nuxt",
+    "vue-sonner/nuxt"
+  ],
 
   imports: {
-    imports: [
-      {
-        from: "tailwind-variants",
-        name: "tv",
-      },
-      {
-        from: "tailwind-variants",
-        name: "VariantProps",
-        type: true,
-      },
-    ],
+    imports: [{
+      from: "tailwind-variants",
+      name: "tv",
+    }, {
+      from: "tailwind-variants",
+      name: "VariantProps",
+      type: true,
+    }, {
+      from: "vue-sonner",
+      name: "toast",
+      as: "useSonner",
+    }],
   },
 
   colorMode: {
